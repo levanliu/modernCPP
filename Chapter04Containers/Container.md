@@ -60,3 +60,28 @@ std::get<index>(t);
 to use ** std::variant<>** (introduced by C++ 17) to provide type template parameters for variant<> You can have a variant<> to accommodate several types of variables provided 
 
 
+
+#### Merge and Iteration
+
+merge two tuples, which can be done with std::tuple_cat:
+
+```cpp
+
+auto new_tuple = std::tuple_cat(get_student(1), std::move(t));
+
+// to get the tuple size
+template < typename T>
+autp tuple_len(T &tpl){
+    return std::tuple_size<T>::value;
+}
+
+//this will iterate over the tuple
+for(int i = 0; i < tuple_len(new_tuple); ++i)
+    std::cout << tuple_index(new_tuple,i) << std::endl;
+
+
+
+
+```
+
+
