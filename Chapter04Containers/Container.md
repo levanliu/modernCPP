@@ -57,7 +57,7 @@ std::cout << std::get<3>(t) << std::endl;
 int index = 1;
 std::get<index>(t);
 ```
-to use ** std::variant<>** (introduced by C++ 17) to provide type template parameters for variant<> You can have a variant<> to accommodate several types of variables provided 
+to use **std::variant<>** (introduced by C++ 17) to provide type template parameters for variant<> You can have a variant<> to accommodate several types of variables provided 
 
 
 
